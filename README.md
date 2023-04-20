@@ -1,4 +1,4 @@
-# This is the repository for the lab assigments of the course Software Engineering in practise
+# This is the repository for the lab assignments of the course Software Engineering in practise
 ## Lab Assignment #2:Build Automation Tools
 
 ## Assignment (1)
