@@ -10,12 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>gradeshistogram</artifactId>
-    <description>This module contains the necessary rescources and the class HistogramGenerator for the generation of histogram chart of a txt </description>
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <name>Histogram Generator</name>
+    <description>This module contains the necessary resources and the class HistogramGenerator for the generation of histogram chart of a txt </description>
     <dependencies><!-- https://mvnrepository.com/artifact/org.jfree/jfreechart -->
         <dependency>
             <groupId>org.jfree</groupId>
