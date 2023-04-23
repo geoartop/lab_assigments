@@ -11,12 +11,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
+
 
 
 /**
- * <p>F class.</p>
+ * <p class.</p>
  *
  * @author George Artopoulos
  * @version $Id: $Id
@@ -26,6 +25,7 @@ public class HistogramGenerator {
     /**
      * <p>main.</p>
      * The main method of the program.
+     *
      * @param args an array of {@link java.lang.String} objects
      * @throws java.io.IOException if any.
      */
@@ -37,34 +37,32 @@ public class HistogramGenerator {
     /**
      * <p>readIntegersFromFile.</p>
      * Reads integers from a file and returns them as an array.
+     *
      * @param fileName a {@link java.lang.String} object
      * @return an array of {@link int} objects
      * @throws java.io.IOException if any.
      */
     public int[] readIntegersFromFile(String fileName) throws IOException {
-        List<Integer> integers = new ArrayList<>();
-
+        int[] frequencies = new int[11];
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(
                 getClass().getClassLoader().getResourceAsStream(fileName), StandardCharsets.UTF_8))) {
             String line = reader.readLine();
             while (line != null) {
-                integers.add(Integer.parseInt(line.trim()));
+                frequencies[Integer.parseInt(line.trim())]++;
                 line = reader.readLine();
             }
         } catch (NullPointerException e) {
             throw new RuntimeException("File not found: " + fileName);
         }
 
-        int[] result = new int[integers.size()];
-        for (int i = 0; i < integers.size(); i++) {
-            result[i] = integers.get(i);
-        }
-        return result;
+        return frequencies;
     }
+
 
     /**
      * <p>generateHistogram.</p>
      * Generates a histogram from an array of integers.
+     *
      * @param dataValues an array of {@link int} objects
      */
     protected void generateHistogram(int[] dataValues) {
@@ -91,7 +89,7 @@ public class HistogramGenerator {
         boolean urls = false; // do not visualize urls
 
 // Declare and initialize a createXYLineChart JFreeChart
-        JFreeChart chart = ChartFactory.createXYLineChart("Grades", "Students", "Grades", dataset,
+        JFreeChart chart = ChartFactory.createXYLineChart("Grades", "Students", "Frequency", dataset,
                 PlotOrientation.VERTICAL, legend, tooltips, urls);
 
         /*
