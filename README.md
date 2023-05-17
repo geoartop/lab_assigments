@@ -1,50 +1,12 @@
 # This is the repository for the lab assignments of the course Software Engineering in practise
-## Lab Assignment #2:Build Automation Tools
+![Build Status](https://github.com/geoartop/lab_assigments/actions/workflows/maven.yml/badge.svg)
 
-## Assignment (1)
+## Structure of the repository
 
-Step 1: Create a parent Maven simple project (skip archetype selection) with the following
-details:
+The repository is structured in the following way:
 
-➢ groupId = gr.aueb.dmst.yourname
-
-➢ artifactId = seip2023_practical_assignments
-
-Step 2: Create a module Maven simple project (skip archetype selection) with the following
-details:
-
-➢ Module artifactId = gradeshistogram
-
-Also, include a proper name and a good description in the corresponding POM elements for
-both parent and module.
-
-The following steps refer to the child (module) Maven project.
-
-Step 3: Add the latest JFreeChart charting Java library from the central Maven Repository as a
-dependency in your POM.
-
-Step 4: Add the appropriate plugin in the POM so that your project can be packaged
-including the dependency (fat jar).
-
-### Assignment (2)
-
-Step 5: Download the file with the grades.
-
-Step 6: Create a class named HistogramGenerator.
-
-Step 7: In HistogramGenerator, create a method that reads the grades file and
-stores the values in an array. Then, generate and present a histogram based on the
-array of values. A chart such as XYLineChart satisfies the assignment
-requirements.
-
-• In the main method, call the other methods to generate the histogram of the
-grades’ frequencies.
-
-• Here is an example of how to use a XYLineChart to create charts. You are
-free to use any other charts available in the library.
-
-• Important: The grades file should be given as a command-line argument at
-runtime. 
+- [Grades Histogram](gradesHistogram): Second lab assignment
+- [Unit testing](unittesting): Third lab assignment
 
 ## How to execute the program and create the histogram:
 
@@ -64,4 +26,4 @@ runtime.
 
 5. cd Histogram/target
 
-4. java -jar .\gradeshistogram-1.0-SNAPSHOT-jar-with-dependencies.jar grades.txt
+6. java -jar .\gradeshistogram-1.0-SNAPSHOT-jar-with-dependencies.jar grades.txt

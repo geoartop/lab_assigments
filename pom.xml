@@ -9,10 +9,12 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>gradesHistogram</module>
+        <module>unittesting</module>
     </modules>
     <packaging>pom</packaging>
     <name>Lab_Assignments</name>
-    <description>This is the parent to the module gradesHistogram for generating a histogram chart for a .txt file </description>
+    <description>This is the parent project for the lab assignments of the Software Engineering in Practice course.
+    </description>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
