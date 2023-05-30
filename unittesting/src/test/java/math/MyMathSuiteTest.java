@@ -9,4 +9,4 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({MyMathTest.class, MyMathParameterizedTest.class})
-public class MyMathTestSuite {}
+public class MyMathSuiteTest {}

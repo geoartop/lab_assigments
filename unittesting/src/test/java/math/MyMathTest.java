@@ -48,4 +48,10 @@ public class MyMathTest {
         thrown.expect(IllegalArgumentException.class);
         myMath.isPrime(-3);
     }
+
+    @Test
+    public void testPrimeTwo() {
+        boolean result = myMath.isPrime(2);
+        Assert.assertTrue(result);
+    }
 }

@@ -26,6 +26,31 @@ public class ArithmeticOperationsTest {
     }
 
     @Test
+    public void testMultiplyWithNegativeY() {
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage("x & y should be >= 0");
+        arithmeticOperations.multiply(3, -1);
+    }
+
+    @Test
+    public void testMultiplyWithZeroX() {
+        int result = arithmeticOperations.multiply(0, 1);
+        Assert.assertEquals(0, result);
+    }
+
+    @Test
+    public void testMultiplyWithZeroY() {
+        int result = arithmeticOperations.multiply(1, 0);
+        Assert.assertEquals(0, result);
+    }
+
+    @Test
+    public void testMultiplyWithZeroXAndY() {
+        int result = arithmeticOperations.multiply(0, 0);
+        Assert.assertEquals(0, result);
+    }
+
+    @Test
     public void testMultiplyWithNegativeXAndY() {
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage("x & y should be >= 0");
@@ -36,6 +61,12 @@ public class ArithmeticOperationsTest {
     public void testDivide() {
         double result = arithmeticOperations.divide(4, 2);
         Assert.assertEquals(2, result, 0);
+    }
+
+    @Test
+    public void testDivideWithZeroX() {
+        double result = arithmeticOperations.divide(0, 2);
+        Assert.assertEquals(0, result, 0);
     }
 
     @Test(expected = ArithmeticException.class)
