@@ -13,39 +13,39 @@ public class SourceCodeAnalyzerFactoryTest {
 
     @Test
     public void testCreateSourceCodeAnalyzerRegexLocal() {
-        SourceCodeAnalyzer sca_local = scaf.createSourceCodeAnalyzer("local", TYPE_REGEX);
+        SourceCodeAnalyzer sca_local = scaf.createSourceCodeAnalyzer(TYPE_REGEX, "local");
         Assert.assertTrue(sca_local instanceof RegexAnalyzer);
 
     }
 
     @Test
     public void testCreateSourceCodeAnalyzerRegexWeb() {
-        SourceCodeAnalyzer sca_web = scaf.createSourceCodeAnalyzer("web", TYPE_REGEX);
+        SourceCodeAnalyzer sca_web = scaf.createSourceCodeAnalyzer(TYPE_REGEX, "web");
         Assert.assertTrue(sca_web instanceof RegexAnalyzer);
     }
 
     @Test
     public void testCreateSourceCodeAnalyzerStrCompLocal() {
-        SourceCodeAnalyzer sca_local = scaf.createSourceCodeAnalyzer("local", TYPE_STRCOMP);
+        SourceCodeAnalyzer sca_local = scaf.createSourceCodeAnalyzer(TYPE_STRCOMP, "local");
         Assert.assertTrue(sca_local instanceof StrCompAnalyzer);
     }
 
     @Test
     public void testCreateSourceCodeAnalyzerStrCompWeb() {
-        SourceCodeAnalyzer sca_web = scaf.createSourceCodeAnalyzer("web", TYPE_STRCOMP);
+        SourceCodeAnalyzer sca_web = scaf.createSourceCodeAnalyzer(TYPE_STRCOMP, "web");
         Assert.assertTrue(sca_web instanceof StrCompAnalyzer);
     }
 
     @Test
     public void testCreateSourceCodeAnalyzerNullLocal() {
-        SourceCodeAnalyzer sca_local = scaf.createSourceCodeAnalyzer("local", "null");
+        SourceCodeAnalyzer sca_local = scaf.createSourceCodeAnalyzer("null", "local");
         Assert.assertTrue(sca_local instanceof NullSourceCodeAnalyzer);
 
     }
 
     @Test
     public void testCreateSourceCodeAnalyzerNullWeb() {
-        SourceCodeAnalyzer sca_web = scaf.createSourceCodeAnalyzer("web", "null");
+        SourceCodeAnalyzer sca_web = scaf.createSourceCodeAnalyzer("null", "web");
         Assert.assertTrue(sca_web instanceof NullSourceCodeAnalyzer);
     }
 }
