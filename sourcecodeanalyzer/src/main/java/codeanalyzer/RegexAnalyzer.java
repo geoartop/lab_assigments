@@ -4,11 +4,23 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * <p>RegexAnalyzer class.</p>
+ *
+ * @author geoar
+ * @version $Id: $Id
+ */
 public class RegexAnalyzer extends SourceCodeAnalyzer {
+    /**
+     * <p>Constructor for RegexAnalyzer.</p>
+     *
+     * @param fileReaderType a {@link java.lang.String} object
+     */
     public RegexAnalyzer(String fileReaderType) {
         super(fileReaderType);
     }
 
+    /** {@inheritDoc} */
     @Override
     public int calculateLOC(String filepath) throws IOException {
         String sourceCode = fileReader.readFileIntoString(filepath);
@@ -26,6 +38,7 @@ public class RegexAnalyzer extends SourceCodeAnalyzer {
         return loc;
     }
 
+    /** {@inheritDoc} */
     @Override
     public int calculateNOM(String filepath) throws IOException {
         String sourceCode = fileReader.readFileIntoString(filepath);
@@ -39,6 +52,7 @@ public class RegexAnalyzer extends SourceCodeAnalyzer {
         return methodCounter;
     }
 
+    /** {@inheritDoc} */
     @Override
     public int calculateNOC(String filepath) throws IOException {
         String sourceCode = fileReader.readFileIntoString(filepath);

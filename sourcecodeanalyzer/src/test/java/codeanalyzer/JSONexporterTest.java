@@ -1,7 +1,5 @@
 package codeanalyzer;
 
-import codeanalyzer.JSONexporter;
-import codeanalyzer.MetricsExporter;
 import org.junit.Test;
 
 import java.util.HashMap;

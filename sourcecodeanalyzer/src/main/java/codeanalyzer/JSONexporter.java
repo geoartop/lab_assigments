@@ -1,11 +1,15 @@
 package codeanalyzer;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Map;
 
+/**
+ * <p>JSONexporter class.</p>
+ *
+ * @author geoar
+ * @version $Id: $Id
+ */
 public class JSONexporter implements MetricsExporter {
+    /** {@inheritDoc} */
     @Override
     public void writeFile(Map<String, Integer> metrics, String filepath) {
         // Functionality not implemented yet

@@ -1,13 +1,23 @@
 package demo;
 
+import codeanalyzer.SourceCodeAnalyzerFacade;
+
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
-import codeanalyzer.*;
-
+/**
+ * <p>DemoClient class.</p>
+ *
+ * @author geoar
+ * @version $Id: $Id
+ */
 public class DemoClient {
 
+	/**
+	 * <p>main.</p>
+	 *
+	 * @param args an array of {@link java.lang.String} objects
+	 * @throws java.io.IOException if any.
+	 */
 	public static void main(String[] args) throws IOException {
 		String filepath = "src/main/resources/TestClass.java";
 		String sourceCodeAnalyzerType = "regex";

@@ -5,7 +5,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ * <p>CSVexporter class.</p>
+ *
+ * @author geoar
+ * @version $Id: $Id
+ */
 public class CSVexporter implements MetricsExporter {
+    /** {@inheritDoc} */
     @Override
     public void writeFile(Map<String, Integer> metrics, String filepath) {
         File outputFile = new File(filepath + ".csv");

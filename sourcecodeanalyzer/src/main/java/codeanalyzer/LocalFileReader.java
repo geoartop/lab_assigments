@@ -7,7 +7,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <p>LocalFileReader class.</p>
+ *
+ * @author geoar
+ * @version $Id: $Id
+ */
 public class LocalFileReader implements SourceFileReader {
+    /** {@inheritDoc} */
     @Override
     public List<String> readFileIntoList(String filepath) throws IOException {
         List<String> lines = new ArrayList<>();
@@ -21,6 +28,7 @@ public class LocalFileReader implements SourceFileReader {
         return lines;
     }
 
+    /** {@inheritDoc} */
     @Override
     public String readFileIntoString(String filepath) throws IOException {
         // read a locally stored file
