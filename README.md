@@ -7,6 +7,7 @@ The repository is structured in the following way:
 
 - [Grades Histogram](gradesHistogram): Second lab assignment
 - [Unit testing](unittesting): Third lab assignment
+- [Source Code Analyzer](sourcecodeanalyzer): Fourth lab assignment
 
 ## How to execute the program and create the histogram:
 
